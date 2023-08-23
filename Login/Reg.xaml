@@ -1,0 +1,127 @@
+﻿<Window x:Class="Login.Reg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="Reg" Height="570" Width="470" Background="SlateGray">
+    <StackPanel Margin="5"  >
+        <Label x:Name="lblFirstName" Padding="10"   Target="{Binding ElementName=txtFirstName}" >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://www.pngitem.com/pimgs/m/111-1114675_user-login-person-man-enter-person-login-icon.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_First Name             :" ></AccessText>
+                    <TextBox x:Name="txtFirstName" Background="White" TabIndex="0" Width="240"    ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <Label x:Name="lblLastName" Padding="10" Target="{Binding ElementName=txtLastName}" >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://www.pngitem.com/pimgs/m/111-1114675_user-login-person-man-enter-person-login-icon.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_Last Name             :" ></AccessText>
+                    <TextBox x:Name="txtLastName" TabIndex="1" Width="240"  ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <Label x:Name="lblPass" Padding="10" Target="{Binding ElementName=txtPass}"  >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://www.nicepng.com/png/detail/370-3702423_blind-eye-visually-challenged-impaired-comments-show-password.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_Password               :" ></AccessText>
+                    <TextBox x:Name="txtPass" TabIndex="3" Width="240" ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <Label x:Name="lblConfirm" Padding="10" >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://www.nicepng.com/png/detail/370-3702423_blind-eye-visually-challenged-impaired-comments-show-password.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_Confirm Password :" ></AccessText>
+                    <TextBox x:Name="txtConfirm" TabIndex="4" Width="240" ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+
+        <Label x:Name="lblDep" Padding="10" Target="{Binding ElementName=txtDep}"  >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal"  >
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/63/63611.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_Department/Office:"  ></AccessText>
+                    <TextBox x:Name="txtDep" TabIndex="2" Width="240" ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <Label x:Name="lblgender" Padding="10" >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal" >
+                    <Image Source="https://www.pngitem.com/pimgs/m/111-1114675_user-login-person-man-enter-person-login-icon.png" Width="30" Height="20"></Image>
+                    <AccessText Text=" Gender     :" ></AccessText>
+                    <RadioButton  Content="Male" Margin="4" ></RadioButton>
+                    <RadioButton  Content="Female" Margin="4" ></RadioButton>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <StackPanel Orientation="Horizontal" Margin="10,5">
+            <Label Content="Select Your Country  :" FontSize="13"></Label>
+            <ComboBox x:Name="cmbcountry" Width="180" >
+                <ComboBoxItem Content="India" ></ComboBoxItem>
+                <ComboBoxItem Content="Singapore" ></ComboBoxItem>
+                <ComboBoxItem Content="Malaysia" ></ComboBoxItem>
+                <ComboBoxItem Content="Us" ></ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+       
+        <Label x:Name="lalEmail" Padding="10" Target="{Binding ElementName=txtEmail}"  >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://static.vecteezy.com/system/resources/previews/005/269/576/original/mail-icon-free-vector.jpg" Width="30" Height="20"></Image>
+                    <AccessText Text="_E-Mail                   :" ></AccessText>
+                    <TextBox x:Name="txtEmail" TabIndex="5" Width="240" ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <Label x:Name="lblcontact" Padding="10" Target="{Binding ElementName=txtContact}"  >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://icons.veryicon.com/png/o/education-technology/ui-icon/contacts-77.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_Contact No           :" ></AccessText>
+                    <TextBox  x:Name="txtContact" MaxLength="10" TabIndex="6" Width="240" ></TextBox>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+
+        <StackPanel Orientation="Horizontal" Margin="15,10">
+            <Label x:Name="lblname" Content="What is your skill ?" FontSize="13" ></Label>
+            <CheckBox x:Name="chkc" Content="C" Margin="5" ></CheckBox>
+            <CheckBox x:Name="chkcplus" Content="C++" Margin="5" ></CheckBox>
+            <CheckBox x:Name="chkc1" Content="C#" Margin="5" ></CheckBox>
+            <CheckBox x:Name="chkjava" Content="Java" Margin="5" ></CheckBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  Margin="15,10">
+            <Label Content="Are You Working ?" ></Label>
+            <RadioButton Content="Yes" Margin="5" ></RadioButton>
+            <RadioButton Content="No" Margin="5"  ></RadioButton>
+        </StackPanel>
+
+        <Label x:Name="lblAbout" Padding="10" Target="{Binding ElementName=txtAbout}" >
+            <Label.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="https://www.pngitem.com/pimgs/m/111-1114675_user-login-person-man-enter-person-login-icon.png" Width="30" Height="20"></Image>
+                    <AccessText Text="_About Me   :" ></AccessText>
+                </StackPanel>
+            </Label.Content>
+        </Label>
+        <TextBox x:Name="txtAbout" TabIndex="7" AcceptsReturn="True" SpellCheck.IsEnabled="True" Language="Eng-Ind" Height="60"  ></TextBox>
+
+       
+    </StackPanel>
+</Window>
